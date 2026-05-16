@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Astrolábio - História, Funcionamento e Legado</title>
+    <meta name="description" content="Descubra a história completa do astrolábio, o instrumento que uniu astronomia e navegação através dos séculos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f1729 0%, #1a1f3a 50%, #0f1f2e 100%);
+        color: #e8ecf1;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      /* Navigation */
+      nav {
+        position: sticky;
+        top: 0;
+        background: rgba(15, 23, 41, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 2rem;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      nav ul {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        list-style: none;
+        font-size: 0.9rem;
+      }
+
+      nav a {
+        color: #a8b5ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+
+      nav a:hover {
+        color: #fff;
+      }
+
+      #video-class {
+         display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(20, 35, 65, 0.8), rgba(10, 20, 40, 0.95)), url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200&q=80');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 50%, rgba(168, 181, 255, 0.1) 0%, transparent 50%);
+      }
+
+      .hero-content {
+        max-width: 800px;
+        padding: 2rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-family: 'Merriweather', serif;
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+        color: #a8b5ff;
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
+
+      .hero .tagline {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, #a8b5ff, #7c8dff);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(168, 181, 255, 0.4);
+      }
+
+      /* Container */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Sections */
+      section {
+        padding: 6rem 2rem;
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+      }
+
+      .chapter-label {
+        display: inline-block;
+        font-size: 0.8rem;
+        color: #a8b5ff;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-family: 'Merriweather', serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.5rem 0;
+        font-weight: 600;
+      }
+
+      .ornament {
+        display: inline-block;
+        color: #a8b5ff;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+      }
+
+      /* Timeline */
+      .timeline {
+        display: grid;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .timeline-item {
+        display: flex;
+        gap: 2rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-left: 3px solid #a8b5ff;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateX(5px);
+      }
+
+      .timeline-date {
+        min-width: 120px;
+        font-weight: 700;
+        color: #a8b5ff;
+        font-size: 0.9rem;
+      }
+
+      .timeline-content h4 {
+        margin-top: 0;
+      }
+
+      /* Grid Layout */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(168, 181, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(168, 181, 255, 0.5);
+        transform: translateY(-5px);
+      }
+
+      .card h4 {
+        color: #a8b5ff;
+        margin-top: 0;
+      }
+
+      .card .number {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #a8b5ff, #7c8dff);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      /* Personalities Grid */
+      .personality-card {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(168, 181, 255, 0.1);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .personality-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: #a8b5ff;
+      }
+
+      .personality-initials {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #a8b5ff, #7c8dff);
+        border-radius: 50%;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .personality-card h4 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .personality-dates {
+        font-size: 0.9rem;
+        color: #a8b5ff;
+        margin-bottom: 0.5rem;
+      }
+
+      .personality-role {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      /* Image Section */
+      .image-section {
+        margin: 3rem 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      }
+
+      .image-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .image-caption {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+      }
+
+      /* Two Column Layout */
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      /* .two-column-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      } */
+
+      .highlight {
+        color: #a8b5ff;
+        font-weight: 600;
+      }
+
+      .uses-tag {
+        display: inline-block;
+        background: rgba(168, 181, 255, 0.15);
+        color: #a8b5ff;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin: 0.3rem 0.3rem 0.3rem 0;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      footer {
+        background: rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 3rem 2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      footer .footer-content {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      footer h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #a8b5ff;
+      }
+
+      footer .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin: 1.5rem 0;
+        font-size: 0.9rem;
+      }
+
+      footer .footer-nav a {
+        color: #a8b5ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer .footer-nav a:hover {
+        color: white;
+      }
+
+      .footer-quote {
+        margin-top: 2rem;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.95rem;
+      }
+
+      .footer-credit {
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav ul {
+          gap: 1rem;
+          font-size: 0.8rem;
+        }
+
+        .two-column {
+          grid-template-columns: 1fr;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: 70vh;
+        }
+
+        section {
+          padding: 3rem 1rem;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+      }
+
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section {
+        animation: fadeIn 0.6s ease-out;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <ul>
+        <li><a onclick="scrollToSection('historia')">História</a></li>
+        <li><a onclick="scrollToSection('timeline')">Linha do Tempo</a></li>
+        <li><a onclick="scrollToSection('funcionamento')">Funcionamento</a></li>
+        <li><a onclick="scrollToSection('tipos')">Tipos</a></li>
+        <li><a onclick="scrollToSection('personalidades')">Personalidades</a></li>
+        <li><a onclick="scrollToSection('aplicacoes')">Aplicações</a></li>
+        <li><a onclick="scrollToSection('')">Vídeo</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="tagline">Astronomia & Navegação</div>
+        <h1>O Astrolábio</h1>
+        <p class="subtitle">Instrumento milenar que guiou astronomia e navegação através dos séculos</p>
+        <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem;">Descubra como ele moldou nossa compreensão do céu e do mundo</p>
+        <button class="cta-button" onclick="scrollToSection('historia')">Começar a Jornada</button>
+      </div>
+    </section>
+
+    <!-- História -->
+    <section id="historia" class="container">
+      <div class="chapter-label"></div>
+      <h2>História</h2>
+      <div class="ornament">✦</div>
+
+      <div class="two-column">
+        <div class="two-column-content">
+          <h3>Origem na Grécia Antiga</h3>
+          <p>Atribui-se a <span class="highlight">Hiparco de Niceia</span>, por volta de 150 a.C., a invenção dos princípios da projeção estereográfica que tornaram o astrolábio possível. Ptolomeu, no século II d.C., descreveu em sua obra <em>Planisphaerium</em> os fundamentos matemáticos do instrumento.</p>
+          <p>Os gregos viam nele uma maneira de representar o céu tridimensional sobre uma superfície plana — uma ponte entre a geometria celeste e o conhecimento humano.</p>
+        </div>
+        <div class="image-section">
+          <img src="astrolabio.jfif" alt="Astrolábio antigo">
+          <div class="image-caption">Astrolábio da Grécia Antiga</div>
+        </div>
+      </div>
+
+      <!-- <hr style="border: none; margin: 3rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1);"> -->
+
+      <div class="two-column" style="margin-top: 2rem; align-items: flex-start; gap: 2rem;">
+        <div class="two-column-content">
+          <h3>A Idade de Ouro Islâmica</h3>
+          <div style="background: rgba(168, 181, 255, 0.05); padding: 2rem; border-left: 4px solid #a8b5ff; border-radius: 8px; margin: 0;">
+            <p><strong>Séculos VIII — XII</strong></p>
+            <p>Biruni e Al-Zarqali aperfeiçoaram sua construção e introduziram o astrolábio universal, válido para qualquer latitude. O instrumento auxiliava não apenas a astronomia, mas também tarefas religiosas — como determinar a direção de Meca (qibla) e os horários das cinco orações diárias.</p>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="islambi.png" alt="Astrolábio islâmico">
+          <div class="image-caption">A Idade de Ouro Islâmica</div>
+        </div>
+      </div>
+
+      <div class="two-column" style="margin-top: 2rem; align-items: flex-start; gap: 2rem;">
+        <div class="image-section">
+          <img src="navegacao.jpg" alt="Navegação">
+          <div class="image-caption">Grandes Navegações</div>
+        </div>
+        <div class="two-column-content">
+          <h3>A Era das Grandes Navegações</h3>
+          <div style="background: rgba(168, 181, 255, 0.05); padding: 2rem; border-left: 4px solid #a8b5ff; border-radius: 8px; margin: 0;">
+            <p><strong>Séculos XV — XVI</strong></p>
+            <p>Com os portugueses e espanhóis navegando por mares nunca dantes navegados, o astrolábio náutico — versão simplificada e robusta — tornou-se essencial para determinar a latitude a partir da altura do sol ao meio-dia ou da estrela polar.</p>
+            <p><span class="highlight">Vasco da Gama, Pedro Álvares Cabral e Cristóvão Colombo</span> contaram com esse instrumento em suas expedições que redesenharam o mapa do mundo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="container">
+      <div class="chapter-label"></div>
+      <h2>Linha do Tempo</h2>
+      <div class="ornament">✦</div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">~150 A.C.</div>
+          <div class="timeline-content">
+            <h4>Hiparco de Niceia</h4>
+            <p>O astrônomo grego desenvolve a projeção estereográfica, fundamento matemático do astrolábio.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. II</div>
+          <div class="timeline-content">
+            <h4>Ptolomeu</h4>
+            <p>Em "Planisphaerium", Ptolomeu descreve os princípios teóricos do instrumento.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. VIII</div>
+          <div class="timeline-content">
+            <h4>Mundo Islâmico</h4>
+            <p>Al-Fazari constrói o primeiro astrolábio islâmico; começa a idade de ouro do instrumento.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. X</div>
+          <div class="timeline-content">
+            <h4>Al-Zarqali e Al-Biruni</h4>
+            <p>Surge o astrolábio universal (saphaea), válido para qualquer latitude da Terra.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. XI</div>
+          <div class="timeline-content">
+            <h4>Chegada à Europa</h4>
+            <p>Através da Espanha islâmica, o astrolábio entra na Europa cristã e se difunde nas universidades medievais.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1391</div>
+          <div class="timeline-content">
+            <h4>Geoffrey Chaucer</h4>
+            <p>O poeta inglês escreve "A Treatise on the Astrolabe", um dos primeiros manuais técnicos em inglês.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. XV</div>
+          <div class="timeline-content">
+            <h4>Astrolábio Náutico</h4>
+            <p>Os portugueses adaptam o instrumento para uso no mar, criando o astrolábio náutico.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1497</div>
+          <div class="timeline-content">
+            <h4>Vasco da Gama</h4>
+            <p>Chega às Índias utilizando o astrolábio para navegação oceânica em sua histórica viagem.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. XVIII</div>
+          <div class="timeline-content">
+            <h4>Sextante</h4>
+            <p>O sextante substitui gradualmente o astrolábio na navegação, oferecendo maior precisão.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Séc. XXI</div>
+          <div class="timeline-content">
+            <h4>Patrimônio Cultural</h4>
+            <p>O astrolábio permanece como símbolo do conhecimento científico e objeto de estudo em museus e universidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="funcionamento" class="container">
+      <div class="chapter-label"></div>
+      <h2>Como Funciona</h2>
+      <div class="ornament">✦</div>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">Uma máquina analógica de calcular o céu, nas mãos do astrônomo</p>
+
+      <div class="image-section">
+        <img src="Copilot_20260507_213628.png" alt="Anatomia do astrolábio planisférico">
+        <div class="image-caption">Anatomia do astrolábio planisférico</div>
+      </div>
+
+      <h3>As Partes do Instrumento</h3>
+      <div class="grid">
+        <div class="card">
+          <div class="number">01</div>
+          <h4>Mater (Mãe)</h4>
+          <p>Base circular do instrumento, com uma cavidade (limbo) graduada em 360° que serve de suporte para as outras peças.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">02</div>
+          <h4>Tímpano</h4>
+          <p>Disco com o sistema de coordenadas celestes projetado para uma latitude específica — almucantarados e azimutes.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">03</div>
+          <h4>Rete (Rede)</h4>
+          <p>Mapa estelar vazado com ponteiros indicando as estrelas mais brilhantes e o círculo do zodíaco.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">04</div>
+          <h4>Régua (Ostensor)</h4>
+          <p>Ponteiro fixo no centro usado para ler as escalas e realizar cálculos astronômicos.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">05</div>
+          <h4>Alidade</h4>
+          <p>Régua com duas pínulas (miras) no verso do instrumento, usada para medir a altura dos astros acima do horizonte.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 3rem;">Como Medir a Altura de um Astro</h3>
+      <div id="video-class">
+        <video controls autoplay muted width="800">
+          <source src="../resources/demostracao.mp4" type="video/mp4">
+        </video> 
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="number">1</div>
+          <h4>Suspender</h4>
+          <p>Suspender o astrolábio verticalmente pelo anel superior.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">2</div>
+          <h4>Alinhar</h4>
+          <p>Alinhar a alidade para visar o astro desejado através das pínulas.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">3</div>
+          <h4>Ler</h4>
+          <p>Ler a altura do astro na escala graduada do limbo.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">4</div>
+          <h4>Girar</h4>
+          <p>Girar a rete no anverso até que a posição do astro coincida com a altura lida.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">5</div>
+          <h4>Interpretar</h4>
+          <p>Interpretar a configuração resultante para determinar hora, azimute ou ascensão reta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de Astrolábio -->
+    <section id="tipos" class="container">
+      <div class="chapter-label"></div>
+      <h2>Tipos de Astrolábio</h2>
+      <div class="ornament">✦</div>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">Diferentes formas, uma mesma arte de decifrar o céu</p>
+
+      <div class="grid">
+        <div>
+          <div class="image-section">
+            <img src="astrolabio-planisferico.png" alt="Astrolábio Planisférico">
+            <div class="image-caption">Astrolábio Planisférico</div>
+          </div>
+          <h3>Astrolábio Planisférico</h3>
+          <p>O tipo mais comum, usado em terra firme. Representa o céu projetado sobre um plano por meio da projeção estereográfica. Era o astrolábio dos astrônomos e estudiosos.</p>
+          <p><strong>Usos:</strong></p>
+          <div>
+            <span class="uses-tag">Astronomia</span>
+            <span class="uses-tag">Cálculo do tempo</span>
+            <span class="uses-tag">Estudos acadêmicos</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="image-section">
+            <img src="astrolabio-nautico.png" alt="Astrolábio Náutico">
+            <div class="image-caption">Astrolábio Náutico</div>
+          </div>
+          <h3>Astrolábio Náutico</h3>
+          <p>Versão simplificada e robusta, feita em bronze pesado para resistir aos ventos do mar. Possuía apenas o anel graduado e a alidade, servindo para medir a altura do sol ao meio-dia.</p>
+          <p><strong>Usos:</strong></p>
+          <div>
+            <span class="uses-tag">Navegação oceânica</span>
+            <span class="uses-tag">Cálculo da latitude</span>
+            <span class="uses-tag">Grandes Navegações</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="image-section">
+            <img src="astrolabio-esferico.png" alt="Astrolábio Esférico">
+            <div class="image-caption">Astrolábio Esférico</div>
+          </div>
+          <h3>Astrolábio Esférico</h3>
+          <p>Raro e sofisticado, apresenta o céu em uma esfera completa, em vez de um plano. Peça de grande valor matemático e artístico, mais presente em tratados do que em uso prático.</p>
+          <p><strong>Usos:</strong></p>
+          <div>
+            <span class="uses-tag">Ensino avançado</span>
+            <span class="uses-tag">Peça de coleção</span>
+            <span class="uses-tag">Demonstração teórica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grandes Personalidades -->
+    <section id="personalidades" class="container">
+      <div class="chapter-label"></div>
+      <h2>Grandes Personalidades</h2>
+      <div class="ornament">✦</div>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">As mentes brilhantes que aperfeiçoaram e imortalizaram o astrolábio</p>
+
+      <div class="grid">
+        <div class="personality-card">
+          <div class="personality-initials">HN</div>
+          <h4>Hiparco de Niceia</h4>
+          <p class="personality-dates">190 — 120 A.C.</p>
+          <p class="personality-role">Astrônomo Grego</p>
+          <p>Considerado o pai da astronomia científica. Desenvolveu a projeção estereográfica, fundamento matemático do astrolábio, e catalogou mais de 850 estrelas.</p>
+        </div>
+
+        <div class="personality-card">
+          <div class="personality-initials">CP</div>
+          <h4>Cláudio Ptolomeu</h4>
+          <p class="personality-dates">100 — 170 D.C.</p>
+          <p class="personality-role">Astrônomo e Geógrafo</p>
+          <p>Em "Planisphaerium", descreveu teoricamente os princípios do astrolábio. Seu modelo geocêntrico dominaria o pensamento científico por mais de 1.400 anos.</p>
+        </div>
+
+        <div class="personality-card">
+          <div class="personality-initials">AB</div>
+          <h4>Al-Biruni</h4>
+          <p class="personality-dates">973 — 1048</p>
+          <p class="personality-role">Sábio Persa Universal</p>
+          <p>Escreveu um tratado sobre o astrolábio citando 1.000 usos diferentes do instrumento. Foi astrônomo, matemático, físico, historiador e linguista.</p>
+        </div>
+
+        <div class="personality-card">
+          <div class="personality-initials">AZ</div>
+          <h4>Al-Zarqali</h4>
+          <p class="personality-dates">1029 — 1087</p>
+          <p class="personality-role">Astrônomo Andaluz</p>
+          <p>Inventou o astrolábio universal (saphaea), que funcionava para qualquer latitude. Suas tábuas astronômicas foram usadas por séculos em toda a Europa.</p>
+        </div>
+
+        <div class="personality-card">
+          <div class="personality-initials">AZ</div>
+          <h4>Abraão Zacuto</h4>
+          <p class="personality-dates">1452 — 1515</p>
+          <p class="personality-role">Astrônomo Judeu-Português</p>
+          <p>Astrônomo real de Portugal. Seu "Almanach Perpetuum" e suas tábuas de declinação solar foram essenciais para as navegações de Vasco da Gama.</p>
+        </div>
+
+        <div class="personality-card">
+          <div class="personality-initials">GC</div>
+          <h4>Geoffrey Chaucer</h4>
+          <p class="personality-dates">1343 — 1400</p>
+          <p class="personality-role">Poeta e Escritor Inglês</p>
+          <p>Autor dos "Contos de Canterbury", também escreveu "A Treatise on the Astrolabe" em 1391 para seu filho Lewis — um dos primeiros manuais técnicos em inglês.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aplicações Modernas -->
+    <section id="aplicacoes" class="container">
+      <div class="chapter-label"></div>
+      <h2>Aplicações Modernas</h2>
+      <div class="ornament">✦</div>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">Do laboratório medieval à era digital, o legado continua vivo</p>
+
+      <div class="image-section">
+        <img src="astrolabio-museu.png" alt="Astrolábio exposto em museu contemporâneo">
+        <div class="image-caption">Astrolábio exposto em museu contemporâneo</div>
+      </div>
+
+      <div class="grid" style="margin-top: 3rem;">
+        <div class="card">
+          <h4>Museus e Exposições</h4>
+          <p>Astrolábios antigos são preservados em grandes museus como o Museu Britânico, o Museu de História da Ciência de Oxford e o Museu Nacional Maritime de Greenwich.</p>
+        </div>
+
+        <div class="card">
+          <h4>Educação</h4>
+          <p>Universidades utilizam o astrolábio para ensinar história da ciência, geometria esférica e trigonometria, tornando conceitos abstratos tangíveis.</p>
+        </div>
+
+        <div class="card">
+          <h4>Astronomia Amadora</h4>
+          <p>Entusiastas constroem réplicas funcionais e praticam observação celeste tradicional, conectando-se à tradição milenar da astronomia.</p>
+        </div>
+
+        <div class="card">
+          <h4>Uso Religioso</h4>
+          <p>Em algumas tradições islâmicas, o astrolábio ainda é utilizado cerimonialmente para determinar os horários precisos das orações e a direção de Meca.</p>
+        </div>
+
+        <div class="card">
+          <h4>Arte e Coleção</h4>
+          <p>Peças antigas são altamente valorizadas por colecionadores e artesãos recriam modelos históricos combinando arte, precisão e tradição.</p>
+        </div>
+
+        <div class="card">
+          <h4>Aplicativos Modernos</h4>
+          <p>Aplicativos de astronomia para smartphones replicam virtualmente a funcionalidade do astrolábio, mantendo viva sua lógica de milênios.</p>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(168, 181, 255, 0.1), rgba(120, 141, 255, 0.1)); border-left: 4px solid #a8b5ff; padding: 2rem; border-radius: 8px; margin: 3rem 0;">
+        <p style="font-style: italic; font-size: 1.1rem;">
+          "O astrolábio não é apenas um instrumento antigo — é um monumento à curiosidade humana e ao desejo eterno de compreender o céu."
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <h3>O Astrolábio</h3>
+        <p>Conteúdo educacional sobre a história, o funcionamento e o legado do astrolábio.</p>
+        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.5); margin-top: 0.5rem;">Inspirado em referências históricas e acadêmicas.</p>
+
+        <div class="footer-nav">
+          <a href="#historia">História</a>
+          <a href="#timeline">Linha do Tempo</a>
+          <a href="#funcionamento">Funcionamento</a>
+          <a href="#tipos">Tipos</a>
+          <a href="#personalidades">Personalidades</a>
+          <a href="#aplicacoes">Aplicações</a>
+        </div>
+
+        <div class="footer-quote">
+          "Per aspera ad astra" — Pelas dificuldades, até as estrelas
+        </div>
+
+        <div class="footer-credit">
+          Site criado por Matheus e Pietro · 2026 <span class="ornament">✦</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      // Add scroll spy functionality
+      window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        // Update active nav link
+        document.querySelectorAll('nav a').forEach(link => {
+          link.style.borderBottom = 'none';
+          link.style.paddingBottom = '0';
+        });
+        
+        const activeLink = document.querySelector(`nav a[onclick*="${current}"]`);
+        if (activeLink) {
+          activeLink.style.borderBottom = '2px solid #a8b5ff';
+          activeLink.style.paddingBottom = '0.25rem';
+        }
+      });
+    </script>
+</body>
+</html>
