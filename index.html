@@ -134,6 +134,11 @@
         padding: 0 2rem;
       }
 
+      h2 {
+        margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
+      }
+
       /* Sections */
       section {
         padding: 6rem 2rem;
@@ -181,7 +186,7 @@
       .timeline {
         display: grid;
         gap: 2rem;
-        margin-top: 3rem;
+        margin-top: 1rem;
       }
 
       .timeline-item {
@@ -302,7 +307,7 @@
 
       /* Image Section */
       .image-section {
-        margin: 3rem 0;
+        margin: 0.7rem 0;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -463,7 +468,8 @@
         <li><a onclick="scrollToSection('tipos')">Tipos</a></li>
         <li><a onclick="scrollToSection('personalidades')">Personalidades</a></li>
         <li><a onclick="scrollToSection('aplicacoes')">Aplicações</a></li>
-        <li><a onclick="scrollToSection('')">Vídeo</a></li>
+        <li><a onclick="scrollToSection('video')">Vídeo</a></li>
+        <li><a href="fontes.html">Fontes</a></li>
       </ul>
     </nav>
 
@@ -491,8 +497,8 @@
           <p>Os gregos viam nele uma maneira de representar o céu tridimensional sobre uma superfície plana — uma ponte entre a geometria celeste e o conhecimento humano.</p>
         </div>
         <div class="image-section">
-          <img src="astrolabio.jfif" alt="Astrolábio antigo">
-          <div class="image-caption">Astrolábio da Grécia Antiga</div>
+          <img src="resources/grecia_antiga.png" alt="Astrolábio antigo">
+          <div class="image-caption">Grécia Antiga</div>
         </div>
       </div>
 
@@ -629,7 +635,7 @@
         <div class="image-caption">Anatomia do astrolábio planisférico</div>
       </div>
 
-      <h3>As Partes do Instrumento</h3>
+      <h3 style="margin-top: 3rem;">As Partes do Instrumento</h3>
       <div class="grid">
         <div class="card">
           <div class="number">01</div>
@@ -663,7 +669,7 @@
       </div>
 
       <h3 style="margin-top: 3rem;">Como Medir a Altura de um Astro</h3>
-      <video controls autoplay muted width="1036">
+      <video controls autoplay width="1036" style="margin-top: 1.2rem;">
         <source src="resources/demostracao.mp4" type="video/mp4">
       </video> 
       <div class="grid">
@@ -709,10 +715,10 @@
       <div class="grid">
         <div>
           <div class="image-section">
-            <img src="resources/astro_planisferico.jpeg" alt="Astrolábio Planisférico">
+            <img src="resources/astro_planisferico.webp" alt="Astrolábio Planisférico">
             <div class="image-caption">Astrolábio Planisférico</div>
           </div>
-          <h3>Astrolábio Planisférico</h3>
+          <h3 style="margin-top: 2rem;">Astrolábio Planisférico</h3>
           <p>O tipo mais comum, usado em terra firme. Representa o céu projetado sobre um plano por meio da projeção estereográfica. Era o astrolábio dos astrônomos e estudiosos.</p>
           <p><strong>Usos:</strong></p>
           <div>
@@ -724,10 +730,10 @@
 
         <div>
           <div class="image-section">
-            <img src="resources/astro_nautico.png" alt="Astrolábio Náutico">
+            <img src="resources/astro_nautico.webp" alt="Astrolábio Náutico">
             <div class="image-caption">Astrolábio Náutico</div>
           </div>
-          <h3>Astrolábio Náutico</h3>
+          <h3 style="margin-top: 2rem;">Astrolábio Náutico</h3>
           <p>Versão simplificada e robusta, feita em bronze pesado para resistir aos ventos do mar. Possuía apenas o anel graduado e a alidade, servindo para medir a altura do sol ao meio-dia.</p>
           <p><strong>Usos:</strong></p>
           <div>
@@ -742,7 +748,7 @@
             <img src="resources/astro_esferico.jpeg" alt="Astrolábio Esférico">
             <div class="image-caption">Astrolábio Esférico</div>
           </div>
-          <h3>Astrolábio Esférico</h3>
+          <h3 style="margin-top: 2rem;">Astrolábio Esférico</h3>
           <p>Raro e sofisticado, apresenta o céu em uma esfera completa, em vez de um plano. Peça de grande valor matemático e artístico, mais presente em tratados do que em uso prático.</p>
           <p><strong>Usos:</strong></p>
           <div>
@@ -855,7 +861,15 @@
           <p>Aplicativos de astronomia para smartphones replicam virtualmente a funcionalidade do astrolábio, mantendo viva sua lógica de milênios.</p>
         </div>
       </div>
+    </section>
 
+    <section id="video" class="container">
+      <div class="chapter-label"></div>
+      <h2>Vídeo</h2>
+      <div class="ornament">✦</div>
+      <video controls autoplay width="1036" style="margin-top: 20px;">
+        <source src="resources/historia.mp4" type="video/mp4">
+      </video>
       <div style="background: linear-gradient(135deg, rgba(168, 181, 255, 0.1), rgba(120, 141, 255, 0.1)); border-left: 4px solid #a8b5ff; padding: 2rem; border-radius: 8px; margin: 3rem 0;">
         <p style="font-style: italic; font-size: 1.1rem;">
           "O astrolábio não é apenas um instrumento antigo — é um monumento à curiosidade humana e ao desejo eterno de compreender o céu."
@@ -877,6 +891,8 @@
           <a href="#tipos">Tipos</a>
           <a href="#personalidades">Personalidades</a>
           <a href="#aplicacoes">Aplicações</a>
+          <a href="#video">Vídeo</a>
+          <a href="fontes.html">Fontes</a>
         </div>
 
         <div class="footer-quote">
